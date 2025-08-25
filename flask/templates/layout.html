@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask Demo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home') }}">Inicio</a> |
+            <a href="{{ url_for('contact') }}">Contacto</a>
+        </nav>
+    </header>
+
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+
+    <footer>
+        <p>© 2025 Flask Demo Project</p>
+    </footer>
+</body>
+</html>
